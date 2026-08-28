@@ -5,7 +5,7 @@ info:
 
 http:
   method: GET
-  url: https://v6.exchangerate-api.com/v6/{{API_KEY}}/pair/EUR/USD/25
+  url: https://v6.exchangerate-api.com/v6/{{apiKey}}/pair/EUR/USD/25
   auth: inherit
 
 settings:

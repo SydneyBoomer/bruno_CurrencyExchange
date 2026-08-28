@@ -1,0 +1,36 @@
+info:
+  name: Delinea Login
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{DELINEA_URL}}/oauth2/token"
+  body:
+    type: form-urlencoded
+    data:
+      - name: username
+        value: "{{?Delinea Username}}"
+      - name: password
+        value: "{{?Delinea Password}}"
+      - name: grant_type
+        value: password
+  auth: inherit
+
+runtime:
+  scripts:
+    - type: after-response
+      code: |-
+        if (res.status === 200) {
+            bru.setVar("delineaToken", res.body.access_token);
+            console.log("Delinea authentication successful.");
+        } else {
+            console.error("Delinea authentication failed.");
+        }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
