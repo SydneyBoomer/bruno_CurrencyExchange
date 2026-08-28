@@ -1,0 +1,5 @@
+name: CurrExchEnv
+variables:
+  - secret: true
+    name: API_KEY
+    description: ""
