@@ -1,0 +1,16 @@
+info:
+  name: EUR-USD Amount Conversion
+  type: http
+  seq: 5
+
+http:
+  method: GET
+  url: https://v6.exchangerate-api.com/v6/{{API_KEY}}/pair/EUR/USD/25
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
