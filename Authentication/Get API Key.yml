@@ -1,11 +1,14 @@
 info:
-  name: Latest GBP Rates
+  name: Get API Key
   type: http
-  seq: 3
+  seq: 2
 
 http:
   method: GET
-  url: https://v6.exchangerate-api.com/v6/{{apiKey}}/latest/GBP
+  url: "{{DELINEA_URL}}/api/v2/secrets/{{DELINEA_SECRET_ID}}"
+  headers:
+    - name: Authorization
+      value: Bearer {{delineaToken}}
   auth: inherit
 
 settings:

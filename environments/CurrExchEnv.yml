@@ -1,5 +1,10 @@
 name: CurrExchEnv
 variables:
+  - name: DELINEA_URL
+    value: ""
+    description: ""
+  - name: DELINEA_SECRET_ID
+    value: ""
+    description: ""
   - secret: true
     name: API_KEY
-    description: ""
