@@ -42,7 +42,7 @@ The secret key was verified to ensure that it was not stored directly in the rep
 
 ## 9. Configurable External Secrets Manager
 
-Does not specifically have Delinea built in.  Bruno supports bru.runRequest(), runtime variables, environment variables, and scripting APIs for manipulating requests.  So, potentially, Bruno's scripting API is flexible enough that someone could build a Delinea integration at the collection level.
+Does not specifically have Delinea built in.  Bruno supports bru.runRequest(), runtime variables, environment variables, and scripting APIs for manipulating requests.  So, potentially, Bruno's scripting API is flexible enough to build a Delinea integration at the collection level.
 
 ![External Secrets Manager](ExternalSecretsManager.png)
 
